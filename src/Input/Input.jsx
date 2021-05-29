@@ -10,7 +10,9 @@ const Input = ({
   isRequired,
   errorMsg,
   isReadOnly,
-  customValidation
+  customValidation,
+  handleOnInputChange,
+  handleOnInputBlur
 }) => {
   const [inputValue, setInputValue] = useState(value)
   const [error, setError] = useState()
@@ -19,6 +21,7 @@ const Input = ({
   const handleUserInput = (e) => {
     let text = e.target.value.trim()
     setInputValue(text)
+    handleOnInputChange(e)
   }
 
   const validateEmailInput = (input) => {
@@ -56,6 +59,7 @@ const Input = ({
 
   const handleOnBlur = (e) => {
     checkValidation(e.target.value)
+    handleOnInputBlur(e)
   }
 
 

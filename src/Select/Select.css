@@ -14,6 +14,8 @@
     cursor: pointer;
     border: 1px gray solid;
     padding:4px;
+    padding: 6px;
+    border-radius: 3px;
 }
 
 .title-label {
@@ -22,11 +24,12 @@
 
 .list-container {
     cursor: pointer;
+    padding-left: 2px;
 }
 
 .list {
     padding:6px;
-
+    padding-left: 8px;
     border: 1px #d0c9c9 solid;
 }
 
