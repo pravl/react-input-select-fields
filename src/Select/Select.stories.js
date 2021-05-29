@@ -13,9 +13,17 @@ export default {
   };
 
   
-const Template = (args) => <Select {...args} />;
+const Template = (args) => <div><Select {...args} /></div>;
 
 
 export const SelectBox = Template.bind({});
-SelectBox.args = {};
+SelectBox.args = {
+  dropDownList: [
+    {label: "India",value : 1},
+    {label: "America",value : 2},
+    {label: "Russia",value : 3},
+    {label: "Canada",value : 4},
+    {label: "Africa",value : 5},
+  ]
+};
 

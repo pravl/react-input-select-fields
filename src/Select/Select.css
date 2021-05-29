@@ -1,0 +1,36 @@
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.select-box {
+    position: absolute;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border: 1px gray solid;
+    padding:4px;
+}
+
+.title-label {
+    min-width: 40px;
+}
+
+.list-container {
+    cursor: pointer;
+}
+
+.list {
+    padding:6px;
+
+    border: 1px #d0c9c9 solid;
+}
+
+.caret {
+    margin-top: 2px;
+    padding-left: 2px;
+} 

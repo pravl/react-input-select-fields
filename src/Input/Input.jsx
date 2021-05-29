@@ -60,8 +60,9 @@ const Input = ({
 
 
   return (
-    <div>
+    <div className="input-container" >
       <input
+        className="input"
         name={name}
         value={inputValue}
         type={type}
