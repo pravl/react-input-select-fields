@@ -1,9 +1,8 @@
-import AwesomeButton from './button.jsx'
+// import Input from "./Input/Input"
 
-const returnLibrary = () => {
-    return {
-        AwesomeButton: AwesomeButton
-        // you can add here other components that you want to export
-    }
-}
-export default returnLibrary()
+// import Select from "./Select/Select"
+
+export *from "./Input/Input.jsx"
+
+
+export * from "./Select/Select.jsx"

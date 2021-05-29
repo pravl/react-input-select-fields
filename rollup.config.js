@@ -1,66 +1,39 @@
-import styles from "rollup-plugin-styles";
-const autoprefixer = require('autoprefixer');
-// import { terser } from 'rollup-plugin-terser'
+import serve from "rollup-plugin-serve";
+import livereload from "rollup-plugin-livereload";
 import babel from '@rollup/plugin-babel';
-
-import sourcemaps from 'rollup-plugin-sourcemaps'
-
-// the entry point for the library
-const input = 'src/index.js'
-
-// 
-var MODE = [
-    {
-        fomart: 'cjs'
-    },
-    {
-        fomart: 'esm'
-    },
-    {
-        fomart: 'umd'
-    }
-]
-
-
-
-
-var config = []
-
-
-MODE.map((m) => {
-    var conf = {
-        input: input,
-        output: {
-            // then name of your package
-            name: "react-awesome-buttons",
-            file: `dist/index.${m.fomart}.js`,
-            format: m.fomart,
-            exports: "auto"
-        },
-        // this externelizes react to prevent rollup from compiling it
-        external: ["react", /@babel\/runtime/],
-        plugins: [
-            // these are babel comfigurations
-            babel({
-                exclude: 'node_modules/**',
-                plugins: ['@babel/transform-runtime'],
-                babelHelpers: 'runtime'
-            }),
-            // this adds sourcemaps
-            sourcemaps(),
-            // this adds support for styles
-            styles({
-                postcss: {
-                    plugins: [
-                        autoprefixer()
-                    ]
-                }
-            })
-        ]
-    }
-    config.push(conf)
-})
-
-export default [
-    ...config,
-]
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
+import { terser } from "rollup-plugin-terser";
+export default {
+  input: "src/index.js",
+  output: {
+    file: "dist/bundle.js",
+    format: "cjs",
+  },
+  plugins: [
+    nodeResolve({
+      extensions: [".js", ".jsx"],
+    }),
+    // replace({
+    //   'process.env.NODE_ENV': JSON.stringify( 'development' )
+    // }),
+    babel({
+      presets: ["@babel/preset-react"],
+    }),
+    commonjs({
+        include: '**/node_modules/**',
+        namedExports: {},
+    }),
+    terser(),
+  //  cleanup(),
+    // serve({
+    //   open: true,
+    //   verbose: true,
+    //   contentBase: ["", "public"],
+    //   host: "localhost",
+    //   port: 3000,
+    // }),
+    // livereload({ watch: "dist" }),
+  ]
+};
