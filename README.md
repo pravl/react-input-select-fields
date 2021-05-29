@@ -13,7 +13,7 @@ Demo and can be found in the storybook.
 #### Usage
 - Install the package via npm 
 ```
-
+npm install react-input-select-fields
 ```
 ### Input
 Simple input field with allowed types as number and email.
