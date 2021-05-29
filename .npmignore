@@ -22,3 +22,5 @@ package-lock.json
 
 .storybook/
 src/stories/
+
+README.md

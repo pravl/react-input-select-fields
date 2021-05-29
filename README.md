@@ -19,8 +19,13 @@ npm install react-input-select-fields
 Simple input field with allowed types as number and email.
 
 #### Usage
+
 ```
-InputProps
+<InputElement {...props} />
+```
+
+```
+Props
     type
     name
     value,
@@ -47,9 +52,13 @@ InputProps
 ### Select
 Simple Single Select.
 
+```
+<SingleSelect {...props} />
+```
+
 #### Usage
 ```
-InputProps
+Props
     defaultValue
     dropDownList
     onSelect

@@ -1,8 +1,9 @@
-// import Input from "./Input/Input"
 
-// import Select from "./Select/Select"
+import Select from './Select/Select.jsx';
 
-export * from "./Input/Input.jsx"
+import Input from "./Input/Input.jsx"
 
 
-export * from "./Select/Select.jsx"
+export const InputElement = Input
+export const SingleSelect = Select
+
