@@ -1,5 +1,5 @@
 ## the src folder
-src
+src/
 .babelrc
 rollup.config.js
 ## node modules folder
@@ -18,3 +18,7 @@ npm-debug.log
 
 config.gypi
 package-lock.json
+
+
+.storybook/
+src/stories/

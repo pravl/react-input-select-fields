@@ -1,34 +1,43 @@
 {
-	"name": "simple-form-component",
-	"version": "1.0.0",
-	"description": "",
-	"main": "dist/index.cjs.js",
-	"scripts": {
-		"build": "rollup -c"
-	},
-	"peerDependencies": {
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1"
-	},
-	"dependencies": {
-		"@babel/runtime": "^7.12.5"
-	},
-	"keywords": [
-		"react",
-		"keywords"
-	],
-	"author": "Praval Jain <praval41195jain@gmail.com>",
-	"license": "MIT",
-	"devDependencies": {
-		"@babel/cli": "^7.14.3",
-		"@babel/core": "^7.14.3",
-		"@babel/plugin-transform-runtime": "^7.12.10",
-		"@babel/preset-env": "^7.14.4",
-		"@babel/preset-react": "^7.13.13",
-		"@rollup/plugin-babel": "^5.3.0",
-		"autoprefixer": "^10.2.6",
-		"rollup": "^2.50.4",
-		"rollup-plugin-sourcemaps": "^0.6.3",
-		"rollup-plugin-styles": "^3.14.1"
-	}
+  "name": "simple-form-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "scripts": {
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5"
+  },
+  "keywords": [
+    "react",
+    "keywords"
+  ],
+  "author": "Praval Jain <praval41195jain@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.50.4",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-styles": "^3.14.1"
+  }
 }
