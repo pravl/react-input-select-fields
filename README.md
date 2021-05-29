@@ -3,9 +3,6 @@
 
 Demo and can be found in the storybook.
 
-#### Dependencies
-- Node v8.9.4
-
 #### Setup
 - Clone the repo.
 - Run `npm install`
