@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.cjs.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "./node_modules/.bin/rollup --config",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -17,7 +17,8 @@
   },
   "keywords": [
     "react",
-    "keywords"
+    "input",
+    "select"
   ],
   "author": "Praval Jain <praval41195jain@gmail.com>",
   "license": "MIT",

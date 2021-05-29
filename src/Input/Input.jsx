@@ -1,9 +1,39 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
+
+const Input = ({
+  type = "text",
+  name = "input",
+  value,
+  placeholder,
+  maxLength,
+  minLength,
+  isRequired,
+}) => {
+  const [inputValue, setInputValue] = useState(value)
 
 
-const InputElement = () => {
+  const handleUserInput = (e) => {
+    let input = e.target.value.toString()
 
-    return <div>Hello this is storybook demo</div>
+    setInputValue(e.target.value)
+  }
+
+  return (
+    <div>
+      <input
+        name={name}
+        value={inputValue}
+        type={type}
+        placeholder={placeholder}
+        onChange={handleUserInput}
+      //  onBlur={this.handleOnBlur.bind(this)}
+        maxLength={maxLength}
+        minLength={minLength}
+        required={isRequired}
+       // autoFocus={this.props.auto_focus}
+      />
+    </div>
+  )
 }
 
-export default InputElement
+export default Input
