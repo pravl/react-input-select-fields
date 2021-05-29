@@ -12,7 +12,6 @@ export default {
     },
   };
 
-  
 const Template = (args) => <Input {...args} />;
 
 
@@ -30,4 +29,6 @@ InputNumber.args = {
     name : "number",
     placeholder : "enter number",
     isRequired :true,
+    maxLength:20,
+    minLength:3,
 }
