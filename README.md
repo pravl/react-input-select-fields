@@ -1,7 +1,7 @@
 ### Form's Input and Select Element
 
 
-Demo and can be found in the storybook.
+Demo can be found in the storybook.
 
 #### Setup
 - Clone the repo.
