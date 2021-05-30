@@ -13,7 +13,8 @@ const Input = ({
   isReadOnly,
   customValidation,
   handleOnInputChange,
-  handleOnInputBlur
+  handleOnInputBlur, 
+  isErrorShow = true
 }) => {
   const [inputValue, setInputValue] = React.useState(value || "")
   const [error, setError] = React.useState()
@@ -83,7 +84,7 @@ const Input = ({
         readOnly={isReadOnly}
        // autoFocus={this.props.auto_focus}
       />
-      <span>{Boolean(error) ? error : ""}</span>
+     {isErrorShow&&  <span className="error-block">{Boolean(error) ? error : ""}</span>}
     </div>
   )
 }

@@ -38,6 +38,14 @@ Props
     customValidation
     handleOnInputChange
     handleOnInputBlur
+    isErrorShow
+```
+
+```
+ClassName
+ input-container
+ input
+ error-block
 ```
 
 #### Handlers
