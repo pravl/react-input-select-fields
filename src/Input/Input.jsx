@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import * as React from 'react';
+
 
 const Input = ({
   type = "text",
   name = "input",
   value,
-  placeholder,
+  placeholder="Enter here",
   maxLength,
   minLength,
   isRequired,
@@ -14,13 +15,14 @@ const Input = ({
   handleOnInputChange,
   handleOnInputBlur
 }) => {
-  const [inputValue, setInputValue] = useState(value)
-  const [error, setError] = useState()
+  const [inputValue, setInputValue] = React.useState(value || "")
+  const [error, setError] = React.useState()
 
 
   const handleUserInput = (e) => {
     let text = e.target.value.trim()
     setInputValue(text)
+    if (handleOnInputChange)
     handleOnInputChange(e)
   }
 
@@ -59,6 +61,7 @@ const Input = ({
 
   const handleOnBlur = (e) => {
     checkValidation(e.target.value)
+    if (handleOnInputChange)
     handleOnInputBlur(e)
   }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import * as React from 'react';
 
 import "./Select.css"
 
@@ -6,10 +6,10 @@ import "./Select.css"
 
 const Select = ({ defaultValue, dropDownList, onSelect }) => {
 
-    const [value, setValue] = useState(defaultValue)
+    const [value, setValue] = React.useState(defaultValue)
 
-    const [dropDown, setDropDown] = useState(false)
-    const dropDownRef = useRef(null)
+    const [dropDown, setDropDown] = React.useState(false)
+    const dropDownRef = React.useRef(null)
 
 
 
@@ -20,7 +20,7 @@ const Select = ({ defaultValue, dropDownList, onSelect }) => {
       }
 
 
-    useEffect(() => {
+      React.useEffect(() => {
         document.addEventListener("click", clickOutside)
         return () => document.removeEventListener("click", clickOutside)
       })
@@ -28,6 +28,7 @@ const Select = ({ defaultValue, dropDownList, onSelect }) => {
 
     const onChange = (el) => {
         setValue(el)
+        if (onSelect)
         onSelect(el)
     }
 
@@ -43,7 +44,7 @@ const Select = ({ defaultValue, dropDownList, onSelect }) => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 24 24"
             height="1em"
             width="1em"
@@ -57,7 +58,7 @@ const Select = ({ defaultValue, dropDownList, onSelect }) => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 24 24"
                 height="1em"
                 width="1em"
@@ -74,7 +75,7 @@ const Select = ({ defaultValue, dropDownList, onSelect }) => {
       style={ dropDown ? {display : "block"} : {visibility : "hidden"} }
       >
         <div className="list-container">
-          {dropDownList.map((el, i) => (
+          {dropDownList && dropDownList.map((el, i) => (
             <div
             className="list"
               onClick={() => {

@@ -64,6 +64,17 @@ Props
     onSelect
 ```
 
+```
+ClassName
+  select-container
+  title-box
+  title-label
+  caret
+  select-box
+  list-container
+  list
+```
+
 #### Handlers
 
 - `defaultValue`: if value is already present.
