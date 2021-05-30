@@ -228,7 +228,9 @@ var Input = function Input(_ref) {
       var isReadOnly = _ref.isReadOnly,
       customValidation = _ref.customValidation,
       handleOnInputChange = _ref.handleOnInputChange,
-      handleOnInputBlur = _ref.handleOnInputBlur;
+      handleOnInputBlur = _ref.handleOnInputBlur,
+      _ref$isErrorShow = _ref.isErrorShow,
+      isErrorShow = _ref$isErrorShow === void 0 ? true : _ref$isErrorShow;
 
   var _React$useState = React__namespace.useState(value || ""),
       _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -298,7 +300,9 @@ var Input = function Input(_ref) {
     ,
     readOnly: isReadOnly // autoFocus={this.props.auto_focus}
 
-  }), /*#__PURE__*/React__namespace.createElement("span", null, Boolean(error) ? error : ""));
+  }), isErrorShow && /*#__PURE__*/React__namespace.createElement("span", {
+    className: "error-block"
+  }, Boolean(error) ? error : ""));
 };
 
 var InputElement = Input;
